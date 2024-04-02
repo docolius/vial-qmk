@@ -5,8 +5,19 @@
 #define VIAL_KEYBOARD_UID {0xAB, 0x22, 0x68, 0x8B, 0x59, 0xD0, 0x81, 0x11}
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
+#define VIAL_TAP_DANCE_ENTRIES 20
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
 
 #if defined(__AVR_ATmega32U4__)
     #undef ENABLE_RGB_MATRIX_BAND_SAT
     #undef ENABLE_RGB_MATRIX_BAND_VAL
 #endif
+
+#ifdef RGB_MATRIX_ENABLE
+    #define RGB_DISABLE_WHEN_USB_SUSPENDED  // turn off effects when suspended
+#endif
+
+#define RGB_MATRIX_LED_COUNT 70
+
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+#define CAPS_WORD_IDLE_TIMEOUT 2500  // 2.5 seconds.

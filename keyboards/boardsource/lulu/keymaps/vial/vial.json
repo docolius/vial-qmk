@@ -13,6 +13,7 @@
     "via/layouts",
     "via/macros",
     "via/save_load",
+    "via/tap_dance",
     "core/qmk_rgblight"
   ],
   "matrix": {
